@@ -1,4 +1,5 @@
 <!-- ! + (ctrl+space) -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'recipe_app:home' %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About Us</a>
@@ -34,11 +35,12 @@
       <div class="container mt-5">
         <div class="row">
             <div class="card mb-3">
-                <img src="./download.jpeg" class="card-img-top" alt="...">
+                <img src="{% static 'Recipe/download.jpeg' %}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <h5 class="card-title">{{recipe.title}}</h5>
+                  <p class="card-text">Ingredients: {{recipe.ingredients}}</p>
+                  <p class="card-text">{{recipe.procedure}}</p>
+                  <p class="card-text"><small class="text-muted">{{recipe.create_at}}</small></p>
                 </div>
               </div>
           </div>
