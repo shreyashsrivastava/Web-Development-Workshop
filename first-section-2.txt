@@ -4,3 +4,11 @@ Configuring urls:
 3. Add this line in your main urls.py file
 i. from django.urls import path, include
 ii. path('', include('recipe_app.urls')),
+
+For creating the app run:
+python manage.py startapp recipe_app
+import statements:
+1. In your main urls.py file:
+from django.urls import path, include
+2. In views.py file,
+from django.shortcuts import render, HttpResponse
