@@ -1,0 +1,16 @@
+Configuring Templates:
+1. Create a folder 'templates' inside proj directory(inside Recipe folder).
+2. Inside templates folder create 	home.html file
+3. In settings.py file, write "import os" on top of the file and then create one vairable just before TEMPLATES settings : 
+TEMPLATE_DIRS = (
+	os.path.join(
+	os.path.dirname(__file__),
+	'templates'),
+	)
+
+4. Put this TEMPLATE_DIRS variable in your TEMPLATES in your setting .py.
+your new TEMPLATES will look like:
+...
+'DIRS': TEMPLATE_DIRS,
+...
+	

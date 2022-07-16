@@ -1,0 +1,6 @@
+Configuring urls:
+1. Create urls.py file in your app directory
+2. Copy contents from main urls.py file to your newly create app's urls.py file
+3. Add this line in your main urls.py file
+i. from django.urls import path, include
+ii. path('', include('recipe_app.urls')),
